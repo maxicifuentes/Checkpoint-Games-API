@@ -10,4 +10,5 @@ public final class AuthDtos {
     public record RegisterRequest(@NotBlank String nombre, @NotBlank String apellidos, @Email @NotBlank String correo, @NotBlank String clave) { }
     public record AuthResponse(String token, String tipo, Long id, String nombre, String correo) { }
     public record UserResponse(Long id, String nombre, String apellidos, String correo, Rol rol, String region, String comuna, String direccion) { }
+    public record UserRequest(@NotBlank String nombre, @NotBlank String apellidos, @Email @NotBlank String correo, String clave, Rol rol, String region, String comuna, String direccion) { }
 }
